@@ -24,6 +24,15 @@ class ToDoList:
                 print("Task marked as completed.")
                 return
         print("Task not found.")
+    
+    def edit_task(self, task_id, new_title, new_description):
+        for task in self.tasks:
+            if task.id == task_id:
+                task.title = new_title
+                task.description = new_description
+                print("Task updated successfully.")
+                return
+            print("Task not found.")
 
     def clear_tasks(self):
         self.tasks.clear()
